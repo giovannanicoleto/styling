@@ -213,7 +213,7 @@ footer{background:#111;padding:2rem 3rem;display:flex;justify-content:space-betw
         <p class="service-desc">Consultoria completa one-on-one comigo, para descobrirmos o estilo que está escondido em você. Vamos juntas em uma jornada completa de autoconhecimento, ferramentas e transformação real — de dentro pra fora.</p>
       </div>
       <div>
-        <button class="service-btn" onclick="openModal('modal-new-look')">Saber mais!</button>
+        <a href="#new-look" class="service-btn">Saber mais!</a>
       </div>
     </div>
 
@@ -225,7 +225,7 @@ footer{background:#111;padding:2rem 3rem;display:flex;justify-content:space-betw
         <p class="service-desc">Uma sessão de Styling virtual que vai te guiar na construção do seu estilo pessoal, tanto para o dia a dia quanto para o trabalho, aproveitando as roupas que você já tem, com sugestões de looks e refinamento do estilo próprio.</p>
       </div>
       <div>
-        <button class="service-btn" onclick="openModal('modal-closet-call')">Saber mais!</button>
+        <a href="#closet-call" class="service-btn">Saber mais!</a>
       </div>
     </div>
 
@@ -237,16 +237,16 @@ footer{background:#111;padding:2rem 3rem;display:flex;justify-content:space-betw
         <p class="service-desc">Eu vou até você. Mergulhamos juntas no seu guarda-roupa — editamos, combinamos, experimentamos — para montar looks de acordo com sua intenção. A experiência mais divertida do processo.</p>
       </div>
       <div>
-        <button class="service-btn" onclick="openModal('modal-inside-closet')">Saber mais!</button>
+        <a href="#inside-closet" class="service-btn">Saber mais!</a>
       </div>
     </div>
 
   </div>
 </section>
 
-<div class="modal-overlay" id="modal-new-look" onclick="closeModal(event, 'modal-new-look')">
+<div class="modal-overlay" id="modal-new-look" onclick="closeModal(event)">
   <div class="modal-wrapper" onclick="event.stopPropagation()">
-    <button class="modal-close" onclick="document.getElementById('modal-new-look').classList.remove('active')">✕</button>
+    <button class="modal-close" onclick="closeModalDirect()">✕</button>
     <h3 class="modal-title">New Look</h3>
     <p class="modal-subtitle">Consultoria Completa</p>
     
@@ -278,9 +278,9 @@ footer{background:#111;padding:2rem 3rem;display:flex;justify-content:space-betw
   </div>
 </div>
 
-<div class="modal-overlay" id="modal-closet-call" onclick="closeModal(event, 'modal-closet-call')">
+<div class="modal-overlay" id="modal-closet-call" onclick="closeModal(event)">
   <div class="modal-wrapper" onclick="event.stopPropagation()">
-    <button class="modal-close" onclick="document.getElementById('modal-closet-call').classList.remove('active')">✕</button>
+    <button class="modal-close" onclick="closeModalDirect()">✕</button>
     <h3 class="modal-title">Closet Call</h3>
     <p class="modal-subtitle">Styling Online</p>
     
@@ -312,9 +312,9 @@ footer{background:#111;padding:2rem 3rem;display:flex;justify-content:space-betw
   </div>
 </div>
 
-<div class="modal-overlay" id="modal-inside-closet" onclick="closeModal(event, 'modal-inside-closet')">
+<div class="modal-overlay" id="modal-inside-closet" onclick="closeModal(event)">
   <div class="modal-wrapper" onclick="event.stopPropagation()">
-    <button class="modal-close" onclick="document.getElementById('modal-inside-closet').classList.remove('active')">✕</button>
+    <button class="modal-close" onclick="closeModalDirect()">✕</button>
     <h3 class="modal-title">Inside Closet</h3>
     <p class="modal-subtitle">Styling Presencial</p>
     
@@ -326,7 +326,7 @@ footer{background:#111;padding:2rem 3rem;display:flex;justify-content:space-betw
       </div>
       <div class="modal-item">
         <span class="modal-item-title">2. Pesquisa e Moodboard</span>
-        <p class="modal-item-desc">Uma vez que discutimos seu objetivo de estilo, vou pesquisar referências e montar um moodboard, uma espécie de guia para o nosso processo e o trabalho com seu guarda-roupas.</p>
+        <p class="modal-item-desc">Uma vez que discutimos seu objectivo de estilo, vou pesquisar referências e montar um moodboard, uma espécie de guia para o nosso processo e o trabalho com seu guarda-roupas.</p>
       </div>
       <div class="modal-item">
         <span class="modal-item-title">3. De volta pro armário</span>
@@ -418,27 +418,50 @@ footer{background:#111;padding:2rem 3rem;display:flex;justify-content:space-betw
 </footer>
 
 <script>
-function openModal(id) {
-  document.getElementById(id).classList.add('active');
-  document.body.style.overflow = 'hidden'; // Trava o scroll do fundo
-}
+// Lista de IDs válidos de modais baseados na URL
+const validModals = ['new-look', 'closet-call', 'inside-closet'];
 
-function closeModal(event, id) {
-  // Fecha apenas se clicar no fundo desfocado
-  if (event.target.classList.contains('modal-overlay')) {
-    document.getElementById(id).classList.remove('active');
-    document.body.style.overflow = ''; // Libera o scroll
+// Monitora a URL para abrir o modal caso tenha a hashtag correspondente
+function checkHash() {
+  const hash = window.location.hash.replace('#', '');
+  
+  // Primeiro fecha qualquer modal que possa estar aberto
+  document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('active'));
+  document.body.style.overflow = '';
+
+  if (validModals.includes(hash)) {
+    const targetModal = document.getElementById('modal-' + hash);
+    if (targetModal) {
+      targetModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Trava o scroll do fundo
+    }
   }
 }
+
+// Fecha o modal limpando a Hash da URL de forma sutil
+function closeModalDirect() {
+  document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('active'));
+  document.body.style.overflow = '';
+  
+  // Altera a URL limpando a hashtag sem causar tranco visual no scroll da página
+  history.replaceState(null, null, ' ');
+}
+
+function closeModal(event) {
+  // Fecha se clicar na área externa desfocada
+  if (event.target.classList.contains('modal-overlay')) {
+    closeModalDirect();
+  }
+}
+
+// Escuta mudanças de hash (quando clica nos botões) e quando a página carrega
+window.addEventListener('hashchange', checkHash);
+window.addEventListener('DOMContentLoaded', checkHash);
 
 // Fecha o modal ao apertar a tecla ESC
 document.addEventListener('keydown', function(event) {
   if (event.key === 'Escape') {
-    const activeModal = document.querySelector('.modal-overlay.active');
-    if (activeModal) {
-      activeModal.classList.remove('active');
-      document.body.style.overflow = '';
-    }
+    closeModalDirect();
   }
 });
 </script>
