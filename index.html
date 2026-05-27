@@ -2,89 +2,68 @@
 <html lang="pt-BR">
 <head>
   <meta property="og:type" content="website" />
-<meta property="og:title" content="Giovanna Nicoleto | Styling & Consulting" />
-<meta property="og:description" content="Encontre seu estilo autêntico e único dentro do seu guarda-roupa." />
-<meta property="og:url" content="https://giovannanicoleto.github.io/styling/" />
-<meta property="og:image" content="https://giovannanicoleto.github.io/styling/foto-hero.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
+  <meta property="og:title" content="Giovanna Nicoleto | Styling & Consulting" />
+  <meta property="og:description" content="Encontre seu estilo autêntico e único dentro do seu guarda-roupa." />
+  <meta property="og:url" content="https://giovannanicoleto.github.io/styling/" />
+  <meta property="og:image" content="https://giovannanicoleto.github.io/styling/foto-hero.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Giovanna Nicoleto | Styling & Consulting" />
-<meta name="twitter:description" content="Encontre seu estilo autêntico e único dentro do seu guarda-roupa." />
-<meta name="twitter:image" content="https://giovannanicoleto.github.io/styling/foto-hero.jpg" />
-<meta charset="UTF-8">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Giovanna Nicoleto | Styling & Consulting" />
+  <meta name="twitter:description" content="Encontre seu estilo autêntico e único dentro do seu guarda-roupa." />
+  <meta name="twitter:image" content="https://giovannanicoleto.github.io/styling/foto-hero.jpg" />
+  <meta charset="UTF-8">
 
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Giovanna Nicoleto | Styling & Consulting" />
-<meta property="og:description" content="Encontre seu estilo autêntico e único dentro do seu guarda-roupa." />
-<meta property="og:url" content="https://giovannanicoleto.github.io/styling" />
-<meta property="og:image" content="foto-hero.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:#fff;color:#111;overflow-x:hidden}
 
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Giovanna Nicoleto | Styling & Consulting" />
-<meta name="twitter:description" content="Encontre seu estilo autêntico e único dentro do seu guarda-roupa." />
-<meta name="twitter:image" content="foto-hero.jpg" />
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 3rem;background:rgba(255,255,255,0.96);border-bottom:0.5px solid rgba(0,0,0,0.07)}
+    .nav-brand{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;letter-spacing:0.08em;color:#111}
+    .nav-brand span{font-weight:300;font-style:italic}
+    .nav-links{display:flex;gap:2.5rem}
+    .nav-links a{font-size:11px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:#777;text-decoration:none;transition:color 0.2s}
+    .nav-links a:hover{color:#C4406A}
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:#fff;color:#111;overflow-x:hidden}
+    /* HERO */
+    .hero{min-height:100vh;display:grid;grid-template-columns:55% 45%;padding-top:68px;background:#fff}
+    .hero-left{position:relative;overflow:hidden;background:#1a1a1a}
+    .hero-left img{width:100%;height:100%;object-fit:cover;object-position:center center;opacity:0.95}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to right, rgba(0,0,0,0.2) 0%, transparent 60%)}
+    .hero-text-over{position:absolute;bottom:4rem;left:4rem;right:2rem}
+    .hero-name{font-family:'Playfair Display',serif;font-size:72px;font-weight:900;line-height:0.95;color:#fff;letter-spacing:-0.01em}
+    .hero-name em{font-style:italic;font-weight:400}
+    .hero-slug{font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.8);margin-top:1.5rem}
+    .hero-right{display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 5rem 5rem;background:#fff}
+    .hero-tagline{font-family:'Playfair Display',serif;font-size:34px;font-weight:400;font-style:italic;line-height:1.35;color:#111;margin-bottom:3rem}
+    .hero-tagline strong{font-weight:900;font-style:normal;display:block;font-size:38px;margin-bottom:0.5rem}
+    .hero-body{font-size:15px;font-weight:300;line-height:1.85;color:#555;margin-bottom:3rem;max-width:380px}
+    .hero-cta{display:inline-flex;align-items:center;gap:0.75rem;background:#C4406A;color:#fff;font-size:11px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;padding:1rem 2rem;text-decoration:none;transition:all 0.2s;width:fit-content}
+    .hero-cta:hover{background:#111}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 3rem;background:rgba(255,255,255,0.96);border-bottom:0.5px solid rgba(0,0,0,0.07)}
-.nav-brand{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;letter-spacing:0.08em;color:#111}
-.nav-brand span{font-weight:300;font-style:italic}
-.nav-links{display:flex;gap:2.5rem}
-.nav-links a{font-size:11px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:#777;text-decoration:none;transition:color 0.2s}
-.nav-links a:hover{color:#C4406A}
+    /* MÉTODO */
+    .method{padding:8rem 5rem;background:#FAF5F0;display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:center}
+    .method-label{font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#C4406A;margin-bottom:1.5rem}
+    .method-title{font-family:'Playfair Display',serif;font-size:50px;font-weight:900;line-height:1.05;color:#111;margin-bottom:2.5rem}
+    .method-title em{font-style:italic;color:#C4406A}
+    .method-text p{font-size:16px;font-weight:300;line-height:1.9;color:#555;margin-bottom:1.2rem}
+    .method-right{position:relative}
+    .method-img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+    .method-quote{position:absolute;bottom:-1.5rem;left:-3rem;background:#C4406A;padding:2rem 2.5rem;max-width:280px}
+    .method-quote p{font-family:'Playfair Display',serif;font-size:17px;font-style:italic;color:#fff;line-height:1.5}
 
-/* HERO */
-.hero{min-height:100vh;display:grid;grid-template-columns:55% 45%;padding-top:68px;background:#fff}
-.hero-left{position:relative;overflow:hidden;background:#1a1a1a}
-.hero-left img{width:100%;height:100%;object-fit:cover;object-position:center center;opacity:0.95}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right, rgba(0,0,0,0.2) 0%, transparent 60%)}
-.hero-text-over{position:absolute;bottom:4rem;left:4rem;right:2rem}
-.hero-name{font-family:'Playfair Display',serif;font-size:72px;font-weight:900;line-height:0.95;color:#fff;letter-spacing:-0.01em}
-.hero-name em{font-style:italic;font-weight:400}
-.hero-slug{font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.8);margin-top:1.5rem}
-.hero-right{display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 5rem 5rem;background:#fff}
-.hero-tagline{font-family:'Playfair Display',serif;font-size:34px;font-weight:400;font-style:italic;line-height:1.35;color:#111;margin-bottom:3rem}
-.hero-tagline strong{font-weight:900;font-style:normal;display:block;font-size:38px;margin-bottom:0.5rem}
-.hero-body{font-size:15px;font-weight:300;line-height:1.85;color:#555;margin-bottom:3rem;max-width:380px}
-.hero-cta{display:inline-flex;align-items:center;gap:0.75rem;background:#C4406A;color:#fff;font-size:11px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;padding:1rem 2rem;text-decoration:none;transition:all 0.2s;width:fit-content}
-.hero-cta:hover{background:#111}
-
-/* MÉTODO */
-.method{padding:8rem 5rem;background:#FAF5F0;display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:center}
-.method-label{font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#C4406A;margin-bottom:1.5rem}
-.method-title{font-family:'Playfair Display',serif;font-size:50px;font-weight:900;line-height:1.05;color:#111;margin-bottom:2.5rem}
-.method-title em{font-style:italic;color:#C4406A}
-.method-text p{font-size:16px;font-weight:300;line-height:1.9;color:#555;margin-bottom:1.2rem}
-.method-right{position:relative}
-.method-img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
-.method-quote{position:absolute;bottom:-1.5rem;left:-3rem;background:#C4406A;padding:2rem 2.5rem;max-width:280px}
-.method-quote p{font-family:'Playfair Display',serif;font-size:17px;font-style:italic;color:#fff;line-height:1.5}
-
-/* SERVIÇOS */
-.services{padding:8rem 5rem;background:#E8C4C4}
-.services-header{margin-bottom:5rem}
-.services-label{font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#7a2a40;margin-bottom:1rem}
-.services-title{font-family:'Playfair Display',serif;font-size:56px;font-weight:900;line-height:1;color:#3a1020}
-.services-title em{font-style:italic;font-weight:400;color:#7a2a40}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.service-card{background:#fff;padding:3rem 2.5rem;border:0.5px solid rgba(122,42,64,0.15);transition:transform 0.3s;display:flex;flex-direction:column;justify-content:space-between}
-.service-card:hover{transform:translateY(-4px)}
-.service-num{font-family:'Playfair Display',serif;font-size:52px;font-weight:900;color:#E8C4C4;line-height:1;margin-bottom:1.5rem}
-.service-name{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:#3a1020;margin-bottom:0.4rem;line-height:1.1}
-.service-name em{font-style:italic;font-weight:400;color:#C4406A}
-.service-subtitle{font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:#aaa;margin-bottom:1.5rem}
-.service-desc{font-size:14px;font-weight:300;line-height:1.85;color:#666;margin-bottom:1.5rem}
-.service-tag{display:inline-block;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#C4406A;border:0.5px solid #C4406A;padding:5px 12px;width:fit-content}
-.service-btn{background:none;border:0.5px solid #C4406A;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:#C4406A;cursor:pointer;padding:5px 12px;margin-top:2rem;text-align:center;width:fit-content;display:inline-block;transition:all 0.2s}
-.service-btn:hover{background:#C4406A;color:#fff}
-
-/* MODAIS */
-.modal-overlay {position:fixed;inset:0;background:rgba(255,
+    /* SERVIÇOS */
+    .services{padding:8rem 5rem;background:#E8C4C4}
+    .services-header{margin-bottom:5rem}
+    .services-label{font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#7a2a40;margin-bottom:1rem}
+    .services-title{font-family:'Playfair Display',serif;font-size:56px;font-weight:900;line-height:1;color:#3a1020}
+    .services-title em{font-style:italic;font-weight:400;color:#7a2a40}
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    .service-card{background:#fff;padding:3rem 2.5rem;border:0.5px solid rgba(122,42,64,0.15);transition:transform 0.3s;display:flex;flex-direction:column;justify-content:space-between}
+    .service-card:hover{transform:translateY(-4px)}
+    .service-num{font-family:'Playfair Display',serif;font-size:52px;font-weight:900;color:#E8C4C4;line-height:1;margin-bottom:1.5rem}
+    .service-name{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:#3a1020;margin-bottom:0.4rem;line-height:1.1}
+    .
