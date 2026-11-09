@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -78,12 +79,32 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .modal-cta {display:flex;align-items:center;justify-content:center;background:#C4406A;color:#fff;font-size:12px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;padding:1.2rem 2rem;text-decoration:none;transition:background 0.2s;width:100%;text-align:center}
 .modal-cta:hover {background:#111}
 
+/* OUTROS SERVIÇOS */
+.avulsos{padding:8rem 5rem;background:#FAF5F0}
+.avulsos-eyebrow{font-size:10px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:#C4406A;margin-bottom:1rem}
+.avulsos-title{font-family:'Playfair Display',serif;font-size:56px;font-weight:900;line-height:1;color:#111;margin-bottom:0.5rem}
+.avulsos-sub{font-size:15px;font-weight:300;color:#777;margin-bottom:4rem}
+.avulsos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.avulsos-card{background:#fff;border:0.5px solid #E0D5CC;padding:2rem 2.5rem}
+.avulsos-tag{display:inline-block;font-size:9px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:#7A2A40;border:0.5px solid #C4406A;padding:3px 9px;margin-bottom:14px}
+.avulsos-name{font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:#111;margin-bottom:6px;line-height:1.15}
+.avulsos-name em{font-style:italic;color:#C4406A}
+.avulsos-hr{width:32px;height:1.5px;background:#C4406A;border:none;margin:0 0 14px}
+.avulsos-copy{font-size:14px;font-weight:300;color:#444;line-height:1.7;margin-bottom:1.5rem}
+.avulsos-cta{font-size:12px;font-weight:500;letter-spacing:0.05em;color:#C4406A;text-decoration:none;border-bottom:0.5px solid #C4406A;padding-bottom:1px;display:inline-block;transition:opacity 0.2s}
+.avulsos-cta:hover{opacity:0.7}
+
 /* PORTFÓLIO */
 .portfolio{padding:7rem 5rem;background:#fff}
 .portfolio-header{margin-bottom:3.5rem;display:flex;justify-content:space-between;align-items:flex-end}
 .portfolio-label{font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#C4406A;margin-bottom:0.75rem}
 .portfolio-title{font-family:'Playfair Display',serif;font-size:48px;font-weight:900;color:#111;line-height:1}
 .portfolio-hint{font-size:12px;color:#bbb;letter-spacing:0.1em;text-transform:uppercase}
+.portfolio-hint{text-decoration:none;color:#C4406A;transition:color .2s}
+.portfolio-hint:hover{color:#111}
+.portfolio-more{margin-top:2.5rem;text-align:center}
+.portfolio-more a{display:inline-block;background:#C4406A;color:#fff;font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;padding:1.1rem 2.4rem;text-decoration:none;transition:background .2s}
+.portfolio-more a:hover{background:#111}
 .port-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:auto auto;gap:8px}
 .port-cell{overflow:hidden;background:#f0ece6}
 .port-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s}
@@ -119,6 +140,109 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 footer{background:#111;padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center}
 .f-brand{font-family:'Playfair Display',serif;font-size:16px;font-style:italic;color:#fff}
 .f-info{font-size:11px;color:#555;letter-spacing:0.1em}
+
+/* ===== RESPONSIVO (tablet e celular) ===== */
+html{-webkit-text-size-adjust:100%}
+@media (hover:none){
+  .service-card:hover{transform:none}
+  .port-cell img:hover{transform:none}
+}
+
+@media (max-width:1024px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{gap:1.3rem}
+  .hero-text-over{left:2rem;right:1.5rem}
+  .hero-name{font-size:56px}
+  .hero-right{padding:4rem 2.5rem}
+  .hero-tagline{font-size:28px}
+  .hero-tagline strong{font-size:32px}
+  .method,.about{padding:6rem 2.5rem;gap:3.5rem}
+  .method-title,.about-title{font-size:40px}
+  .method-quote{left:-1.5rem}
+  .services,.avulsos,.portfolio{padding:6rem 2.5rem}
+  .services-title,.avulsos-title{font-size:44px}
+  .services-grid{gap:1rem}
+  .service-card{padding:2.2rem 1.6rem}
+  .service-name{font-size:26px}
+  .avulsos-card{padding:1.8rem}
+  .avulsos-name{font-size:24px}
+  .portfolio-title{font-size:40px}
+  .contact{padding:6rem 2.5rem;gap:3rem}
+  .contact-left h2{font-size:48px}
+  footer{padding:2rem 2.5rem}
+}
+
+@media (max-width:768px){
+  html{scroll-padding-top:72px}
+  nav{flex-direction:column;align-items:stretch;gap:.35rem;padding:.7rem 1rem}
+  .nav-brand{font-size:14px;text-align:center}
+  .nav-brand span{display:none}
+  .nav-links{gap:.7rem;justify-content:space-between;overflow-x:auto;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .nav-links::-webkit-scrollbar{display:none}
+  .nav-links a{font-size:10px;letter-spacing:.08em;flex-shrink:0}
+
+  .hero{grid-template-columns:1fr;min-height:0;padding-top:64px}
+  .hero-left{height:78vh;min-height:430px;max-height:640px}
+  .hero-overlay{background:linear-gradient(to top,rgba(0,0,0,.55) 0%,transparent 55%)}
+  .hero-text-over{left:1.5rem;right:1.5rem;bottom:2rem}
+  .hero-name{font-size:48px}
+  .hero-slug{font-size:10px;letter-spacing:.18em;margin-top:1rem}
+  .hero-right{padding:3rem 1.5rem 3.5rem}
+  .hero-tagline{font-size:26px;margin-bottom:1.8rem}
+  .hero-tagline strong{font-size:31px}
+  .hero-body{max-width:none;margin-bottom:2rem}
+  .hero-cta{padding:1rem 1.6rem}
+
+  .method,.about{grid-template-columns:1fr;padding:4.5rem 1.5rem;gap:3rem}
+  .method-title,.about-title{font-size:36px;margin-bottom:1.5rem}
+  .method-text p,.about-text p{font-size:15px;line-height:1.8}
+  .method-right{margin-bottom:1.5rem}
+  .method-quote{left:1rem;bottom:-1.5rem;max-width:80%;padding:1.2rem 1.4rem}
+  .method-quote p{font-size:15px}
+
+  .services,.avulsos,.portfolio{padding:4.5rem 1.5rem}
+  .services-header{margin-bottom:2.5rem}
+  .services-title,.avulsos-title{font-size:36px}
+  .services-grid{grid-template-columns:1fr;gap:1rem}
+  .service-card{padding:2rem 1.5rem}
+  .service-num{font-size:44px;margin-bottom:1rem}
+  .service-name{font-size:26px}
+
+  .avulsos-sub{margin-bottom:2.5rem}
+  .avulsos-grid{grid-template-columns:1fr;gap:1rem}
+  .avulsos-card{padding:1.6rem 1.4rem}
+  .avulsos-name{font-size:24px}
+
+  .modal-wrapper{width:92%;max-height:88vh;max-height:88dvh;padding:2.2rem 1.4rem 1.8rem}
+  .modal-close{top:.8rem;right:1rem}
+  .modal-title{font-size:28px;padding-right:2rem}
+  .modal-subtitle{margin-bottom:1.8rem}
+  .modal-list{gap:1.2rem;margin-bottom:2rem}
+  .modal-cta{font-size:11px;letter-spacing:.12em;padding:1.1rem 1rem}
+
+  .portfolio-header{flex-direction:column;align-items:flex-start;gap:1rem;margin-bottom:2rem}
+  .portfolio-title{font-size:36px}
+  .portfolio-hint{display:none}
+  .port-grid{grid-template-columns:1fr 1fr;grid-template-rows:none;grid-auto-rows:190px;gap:6px}
+  .port-cell img,.port-cell.port-tall img,.port-cell:not(.port-tall) img{min-height:0}
+  .portfolio-more{margin-top:1.5rem}
+  .portfolio-more a{display:block}
+
+  .about-stripe{right:0;top:1.5rem;padding:1rem 1.1rem}
+  .about-content{padding-top:0}
+
+  .contact{grid-template-columns:1fr;padding:4.5rem 1.5rem;gap:2.5rem}
+  .contact-left h2{font-size:40px}
+  .btn-w,.btn-o{font-size:11px;letter-spacing:.12em;padding:1.1rem 1.2rem}
+
+  footer{flex-direction:column;gap:.5rem;text-align:center;padding:1.5rem 1rem}
+}
+
+@media (max-width:400px){
+  .hero-name{font-size:42px}
+  .method-title,.about-title,.services-title,.avulsos-title,.portfolio-title{font-size:32px}
+  .contact-left h2{font-size:34px}
+}
 </style>
 </head>
 <body>
@@ -128,6 +252,7 @@ footer{background:#111;padding:2rem 3rem;display:flex;justify-content:space-betw
   <div class="nav-links">
     <a href="#metodo">Método</a>
     <a href="#servicos">Serviços</a>
+    <a href="#avulsos">À la carte</a>
     <a href="#trabalho">Trabalho</a>
     <a href="#sobre">Sobre</a>
     <a href="#contato">Contato</a>
@@ -324,13 +449,54 @@ footer{background:#111;padding:2rem 3rem;display:flex;justify-content:space-betw
   </div>
 </div>
 
+<section class="avulsos" id="avulsos">
+  <p class="avulsos-eyebrow">À la carte</p>
+  <h2 class="avulsos-title">Outros serviços</h2>
+  <p class="avulsos-sub">Pra quem busca algo mais pontual.</p>
+  <div class="avulsos-grid">
+
+    <div class="avulsos-card">
+      <span class="avulsos-tag">Presencial · individual</span>
+      <h3 class="avulsos-name">Coloração <em>Express</em></h3>
+      <hr class="avulsos-hr">
+      <p class="avulsos-copy">Descubra sua cartela e passe a usar as cores a seu favor.</p>
+      <a class="avulsos-cta" href="https://wa.me/5511960707893?text=Oi%2C%20Giovanna!%20Vi%20seu%20site%20e%20tenho%20interesse%20na%20Colora%C3%A7%C3%A3o%20Express.%20Podemos%20conversar%3F" target="_blank">Quero descobrir minha cartela →</a>
+    </div>
+
+    <div class="avulsos-card">
+      <span class="avulsos-tag">Online ou presencial · individual</span>
+      <h3 class="avulsos-name">Look por <em>Ocasião</em></h3>
+      <hr class="avulsos-hr">
+      <p class="avulsos-copy">Um look montado para um momento específico: evento, entrevista, viagem, date etc. Você me conta o contexto e eu monto a proposta com o que você já tem — ou indico o que buscar.</p>
+      <a class="avulsos-cta" href="https://wa.me/5511960707893?text=Oi%2C%20Giovanna!%20Vi%20seu%20site%20e%20tenho%20interesse%20no%20Look%20por%20Ocasi%C3%A3o.%20Podemos%20conversar%3F" target="_blank">Quero um look →</a>
+    </div>
+
+    <div class="avulsos-card">
+      <span class="avulsos-tag">Online · individual</span>
+      <h3 class="avulsos-name">Curadoria <em>Fashion</em></h3>
+      <hr class="avulsos-hr">
+      <p class="avulsos-copy">Um board com links de compra de peças-chave de acordo com sua necessidade, objetivo e orçamento.</p>
+      <a class="avulsos-cta" href="https://wa.me/5511960707893?text=Oi%2C%20Giovanna!%20Vi%20seu%20site%20e%20tenho%20interesse%20na%20Curadoria%20Fashion.%20Podemos%20conversar%3F" target="_blank">Quero uma curadoria →</a>
+    </div>
+
+    <div class="avulsos-card">
+      <span class="avulsos-tag">Presencial · individual</span>
+      <h3 class="avulsos-name">Montagem de <em>Mala</em></h3>
+      <hr class="avulsos-hr">
+      <p class="avulsos-copy">Se você entra em crise na hora de montar sua mala de viagem, principalmente quando tem pouco espaço e muitas ideias, esse é o serviço que você precisa!</p>
+      <a class="avulsos-cta" href="https://wa.me/5511960707893?text=Oi%2C%20Giovanna!%20Vi%20seu%20site%20e%20tenho%20interesse%20na%20Montagem%20de%20Mala.%20Podemos%20conversar%3F" target="_blank">Quero montar minha mala →</a>
+    </div>
+
+  </div>
+</section>
+
 <section class="portfolio" id="trabalho">
   <div class="portfolio-header">
     <div>
       <p class="portfolio-label">Portfólio</p>
       <h2 class="portfolio-title">Um pouco do<br>meu trabalho</h2>
     </div>
-    <p class="portfolio-hint">↓ ROLE PARA VER MAIS</p>
+    <a class="portfolio-hint" href="portfolio.html">VER PORTFÓLIO COMPLETO →</a>
   </div>
   <div class="port-grid">
     <div class="port-cell port-tall">
@@ -349,6 +515,7 @@ footer{background:#111;padding:2rem 3rem;display:flex;justify-content:space-betw
       <img src="portfolio-5.jpg" alt="Bastidores - Ajustando laço preto" />
     </div>
   </div>
+  <div class="portfolio-more"><a href="portfolio.html">Ver portfólio completo →</a></div>
 </section>
 
 <section class="about" id="sobre">
