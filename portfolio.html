@@ -42,6 +42,9 @@ footer{background:#111;padding:2rem 3rem;display:flex;justify-content:space-betw
 .f-brand{font-family:'Playfair Display',serif;font-size:16px;font-style:italic;color:#fff}
 .f-info{font-size:11px;color:#555;letter-spacing:.1em}
 
+.gallery.m{column-count:auto;display:flex;gap:10px}
+.gallery.m .col{flex:1;min-width:0;display:flex;flex-direction:column;gap:10px}
+.gallery.m .item{margin-bottom:0}
 /* LIGHTBOX */
 .lb{position:fixed;inset:0;z-index:200;background:rgba(17,17,17,.95);display:none;align-items:center;justify-content:center}
 .lb.on{display:flex}
@@ -62,6 +65,8 @@ footer{background:#111;padding:2rem 3rem;display:flex;justify-content:space-betw
   .title{font-size:42px}
   .gallery{column-count:2;padding:1rem 1.2rem 4rem;column-gap:8px}
   .item{margin-bottom:8px}
+  .gallery.m{gap:8px}
+  .gallery.m .col{gap:8px}
   .contact{grid-template-columns:1fr;gap:2.5rem;padding:5rem 1.2rem}
   .contact h2{font-size:40px}
   footer{flex-direction:column;gap:.6rem;padding:1.5rem 1.2rem}
@@ -83,56 +88,70 @@ footer{background:#111;padding:2rem 3rem;display:flex;justify-content:space-betw
   <p class="label">Portfólio</p>
   <h1 class="title">Um pouco do<br><em>meu trabalho</em></h1>
   <p class="sub">Editoriais, bastidores e styling. Clica em qualquer foto pra ver maior.</p>
-  <p class="count">44 fotos</p>
+  <p class="count">58 fotos</p>
 </header>
 
-<!-- Para trocar a ordem, apague uma foto ou adicionar outra, mexa nos blocos <figure> abaixo.
+<!-- A ordem das fotos e a ordem dos blocos abaixo. Para mudar, mova o bloco inteiro.
      Para dar credito ao fotografo, escreva em um paragrafo abaixo do titulo (classe "sub"). -->
 <main class="gallery" id="galeria">
-    <figure class="item" data-i="0"><img src="portfolio-web/goodies-001.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 1"></figure>
-    <figure class="item" data-i="1"><img src="portfolio-web/julia-033.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 2"></figure>
-    <figure class="item" data-i="2"><img src="portfolio-web/jununes-005.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 3"></figure>
-    <figure class="item" data-i="3"><img src="portfolio-web/clara-002.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 4"></figure>
-    <figure class="item" data-i="4"><img src="portfolio-web/goodies-048.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 5"></figure>
-    <figure class="item" data-i="5"><img src="portfolio-web/julia-037.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 6"></figure>
-    <figure class="item" data-i="6"><img src="portfolio-web/jununes-006.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 7"></figure>
-    <figure class="item" data-i="7"><img src="portfolio-web/clara-017.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 8"></figure>
-    <figure class="item" data-i="8"><img src="portfolio-web/goodies-081.jpg" width="1400" height="933" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 9"></figure>
-    <figure class="item" data-i="9"><img src="portfolio-web/julia-038.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 10"></figure>
-    <figure class="item" data-i="10"><img src="portfolio-web/jununes-010.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 11"></figure>
-    <figure class="item" data-i="11"><img src="portfolio-web/clara-018.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 12"></figure>
-    <figure class="item" data-i="12"><img src="portfolio-web/goodies-096.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 13"></figure>
-    <figure class="item" data-i="13"><img src="portfolio-web/julia-040.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 14"></figure>
-    <figure class="item" data-i="14"><img src="portfolio-web/jununes-018.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 15"></figure>
-    <figure class="item" data-i="15"><img src="portfolio-web/clara-019.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 16"></figure>
-    <figure class="item" data-i="16"><img src="portfolio-web/goodies-116.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 17"></figure>
-    <figure class="item" data-i="17"><img src="portfolio-web/julia-041.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 18"></figure>
-    <figure class="item" data-i="18"><img src="portfolio-web/jununes-022.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 19"></figure>
-    <figure class="item" data-i="19"><img src="portfolio-web/clara-025.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 20"></figure>
-    <figure class="item" data-i="20"><img src="portfolio-web/goodies-122.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 21"></figure>
-    <figure class="item" data-i="21"><img src="portfolio-web/julia-043.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 22"></figure>
-    <figure class="item" data-i="22"><img src="portfolio-web/jununes-023.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 23"></figure>
-    <figure class="item" data-i="23"><img src="portfolio-web/goodies-126.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 24"></figure>
-    <figure class="item" data-i="24"><img src="portfolio-web/julia-047.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 25"></figure>
-    <figure class="item" data-i="25"><img src="portfolio-web/jununes-028.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 26"></figure>
-    <figure class="item" data-i="26"><img src="portfolio-web/goodies-129.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 27"></figure>
-    <figure class="item" data-i="27"><img src="portfolio-web/julia-052.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 28"></figure>
-    <figure class="item" data-i="28"><img src="portfolio-web/goodies-138.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 29"></figure>
-    <figure class="item" data-i="29"><img src="portfolio-web/julia-056.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 30"></figure>
-    <figure class="item" data-i="30"><img src="portfolio-web/goodies-140.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 31"></figure>
-    <figure class="item" data-i="31"><img src="portfolio-web/julia-057.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 32"></figure>
-    <figure class="item" data-i="32"><img src="portfolio-web/goodies-146.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 33"></figure>
-    <figure class="item" data-i="33"><img src="portfolio-web/julia-060.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 34"></figure>
-    <figure class="item" data-i="34"><img src="portfolio-web/goodies-160.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 35"></figure>
-    <figure class="item" data-i="35"><img src="portfolio-web/julia-062.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 36"></figure>
-    <figure class="item" data-i="36"><img src="portfolio-web/goodies-170.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 37"></figure>
-    <figure class="item" data-i="37"><img src="portfolio-web/julia-067.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 38"></figure>
-    <figure class="item" data-i="38"><img src="portfolio-web/goodies-178.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 39"></figure>
-    <figure class="item" data-i="39"><img src="portfolio-web/julia-071.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 40"></figure>
-    <figure class="item" data-i="40"><img src="portfolio-web/goodies-179.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 41"></figure>
-    <figure class="item" data-i="41"><img src="portfolio-web/julia-072.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 42"></figure>
-    <figure class="item" data-i="42"><img src="portfolio-web/goodies-195.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 43"></figure>
-    <figure class="item" data-i="43"><img src="portfolio-web/goodies-215.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 44"></figure>
+    <figure class="item"><img src="portfolio-web/LUANA-DIA-DOS-PAIS-WEB-5.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 1"></figure>
+    <figure class="item"><img src="portfolio-web/LUANA-DIA-DOS-PAIS-WEB-11.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 2"></figure>
+    <figure class="item"><img src="portfolio-web/LUANA-DIA-DOS-PAIS-WEB-12.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 3"></figure>
+    <figure class="item"><img src="portfolio-web/LUANA-DIA-DOS-PAIS-WEB-15.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 4"></figure>
+    <figure class="item"><img src="portfolio-web/LUANA-DIA-DOS-PAIS-WEB-17.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 5"></figure>
+    <figure class="item"><img src="portfolio-web/LUANA-DIA-DOS-PAIS-WEB-18.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 6"></figure>
+    <figure class="item"><img src="portfolio-web/LUANA-DIA-DOS-PAIS-WEB-25%20%281%29.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 7"></figure>
+    <figure class="item"><img src="portfolio-web/LUANA-DIA-DOS-PAIS-WEB-26.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 8"></figure>
+    <figure class="item"><img src="portfolio-web/LUANA-DIA-DOS-PAIS-WEB-29.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 9"></figure>
+    <figure class="item"><img src="portfolio-web/LUANA-DIA-DOS-PAIS-WEB-32.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 10"></figure>
+    <figure class="item"><img src="portfolio-web/LUANA-DIA-DOS-PAIS-WEB-33.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 11"></figure>
+    <figure class="item"><img src="portfolio-web/LUANA-DIA-DOS-PAIS-WEB-36.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 12"></figure>
+    <figure class="item"><img src="portfolio-web/LUANA-DIA-DOS-PAIS-WEB-39.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 13"></figure>
+    <figure class="item"><img src="portfolio-web/LUANA-DIA-DOS-PAIS-WEB-43.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 14"></figure>
+    <figure class="item"><img src="portfolio-web/goodies-001.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 15"></figure>
+    <figure class="item"><img src="portfolio-web/julia-033.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 16"></figure>
+    <figure class="item"><img src="portfolio-web/jununes-005.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 17"></figure>
+    <figure class="item"><img src="portfolio-web/clara-002.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 18"></figure>
+    <figure class="item"><img src="portfolio-web/goodies-048.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 19"></figure>
+    <figure class="item"><img src="portfolio-web/julia-037.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 20"></figure>
+    <figure class="item"><img src="portfolio-web/jununes-006.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 21"></figure>
+    <figure class="item"><img src="portfolio-web/clara-017.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 22"></figure>
+    <figure class="item"><img src="portfolio-web/goodies-081.jpg" width="1400" height="933" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 23"></figure>
+    <figure class="item"><img src="portfolio-web/julia-038.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 24"></figure>
+    <figure class="item"><img src="portfolio-web/jununes-010.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 25"></figure>
+    <figure class="item"><img src="portfolio-web/clara-018.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 26"></figure>
+    <figure class="item"><img src="portfolio-web/goodies-096.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 27"></figure>
+    <figure class="item"><img src="portfolio-web/julia-040.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 28"></figure>
+    <figure class="item"><img src="portfolio-web/jununes-018.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 29"></figure>
+    <figure class="item"><img src="portfolio-web/clara-019.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 30"></figure>
+    <figure class="item"><img src="portfolio-web/goodies-116.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 31"></figure>
+    <figure class="item"><img src="portfolio-web/julia-041.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 32"></figure>
+    <figure class="item"><img src="portfolio-web/jununes-022.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 33"></figure>
+    <figure class="item"><img src="portfolio-web/clara-025.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 34"></figure>
+    <figure class="item"><img src="portfolio-web/goodies-122.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 35"></figure>
+    <figure class="item"><img src="portfolio-web/julia-043.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 36"></figure>
+    <figure class="item"><img src="portfolio-web/jununes-023.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 37"></figure>
+    <figure class="item"><img src="portfolio-web/goodies-126.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 38"></figure>
+    <figure class="item"><img src="portfolio-web/julia-047.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 39"></figure>
+    <figure class="item"><img src="portfolio-web/jununes-028.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 40"></figure>
+    <figure class="item"><img src="portfolio-web/goodies-129.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 41"></figure>
+    <figure class="item"><img src="portfolio-web/julia-052.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 42"></figure>
+    <figure class="item"><img src="portfolio-web/goodies-138.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 43"></figure>
+    <figure class="item"><img src="portfolio-web/julia-056.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 44"></figure>
+    <figure class="item"><img src="portfolio-web/goodies-140.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 45"></figure>
+    <figure class="item"><img src="portfolio-web/julia-057.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 46"></figure>
+    <figure class="item"><img src="portfolio-web/goodies-146.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 47"></figure>
+    <figure class="item"><img src="portfolio-web/julia-060.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 48"></figure>
+    <figure class="item"><img src="portfolio-web/goodies-160.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 49"></figure>
+    <figure class="item"><img src="portfolio-web/julia-062.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 50"></figure>
+    <figure class="item"><img src="portfolio-web/goodies-170.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 51"></figure>
+    <figure class="item"><img src="portfolio-web/julia-067.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 52"></figure>
+    <figure class="item"><img src="portfolio-web/goodies-178.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 53"></figure>
+    <figure class="item"><img src="portfolio-web/julia-071.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 54"></figure>
+    <figure class="item"><img src="portfolio-web/goodies-179.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 55"></figure>
+    <figure class="item"><img src="portfolio-web/julia-072.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 56"></figure>
+    <figure class="item"><img src="portfolio-web/goodies-195.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 57"></figure>
+    <figure class="item"><img src="portfolio-web/goodies-215.jpg" width="1200" height="1800" loading="lazy" alt="Portfólio Giovanna Nicoleto, foto 58"></figure>
 </main>
 
 <section class="contact">
@@ -163,7 +182,8 @@ footer{background:#111;padding:2rem 3rem;display:flex;justify-content:space-betw
 
 <script>
 (function(){
-  var imgs=[].slice.call(document.querySelectorAll('.item img'));
+  var items=[].slice.call(document.querySelectorAll('.item'));
+  var imgs=items.map(function(f){return f.querySelector('img');});
   var lb=document.getElementById('lb'),lbi=document.getElementById('lbi'),lbc=document.getElementById('lbc');
   var cur=0;
   function show(i){
@@ -192,6 +212,26 @@ footer{background:#111;padding:2rem 3rem;display:flex;justify-content:space-betw
     if(Math.abs(d)>50)show(cur+(d<0?1:-1));
     x0=null;
   });
+
+  /* Distribui as fotos nas colunas mantendo a ordem: 1ª, 2ª, 3ª, 4ª na primeira linha, e assim por diante */
+  var gal=document.getElementById('galeria');
+  var ratios=imgs.map(function(im){return im.getAttribute('height')/im.getAttribute('width');});
+  var last=0;
+  function nCols(){var w=window.innerWidth;return w<=760?2:(w<=1100?3:4);}
+  function layout(){
+    var n=nCols(); if(n===last)return; last=n;
+    gal.innerHTML='';
+    var cs=[],hs=[],k;
+    for(k=0;k<n;k++){var c=document.createElement('div');c.className='col';gal.appendChild(c);cs.push(c);hs.push(0);}
+    items.forEach(function(it,i){
+      var m=0;
+      for(k=1;k<n;k++){if(hs[k]<hs[m]-0.001)m=k;}
+      cs[m].appendChild(it);hs[m]+=ratios[i];
+    });
+    gal.classList.add('m');
+  }
+  layout();
+  window.addEventListener('resize',layout);
 })();
 </script>
 </body>
